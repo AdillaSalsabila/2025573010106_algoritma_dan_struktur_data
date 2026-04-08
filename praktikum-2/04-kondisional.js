@@ -1,4 +1,4 @@
-let nilaiUjian =78;
+let nilaiUjian =80;
 
 console.log('=== konversi Grade ===');
 console.log('Nilai:', nilaiUjian);
@@ -61,7 +61,6 @@ if (bulan === 12 || bulan === 1 || bulan === 2) {
 } else {
     musim = 'Bulan tidak valid';
 }
-
 console.log(`Bulan ${bulan} adalah musim ${musim}`);
 
 const adaAwan = true;
@@ -74,3 +73,6 @@ console.log(`Apakah cuaca mendung sekaligus berangin? ${adaAwan && adaAngin}`);
 console.log(`Apakah ada awan atau angin? ${adaAwan || adaAngin}`);
 
 console.log(`Apakah langit cerah (tidak ada awan)? ${!adaAwan}`);
+
+
+

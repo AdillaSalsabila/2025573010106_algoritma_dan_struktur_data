@@ -45,3 +45,5 @@ console.log(`keliling persegi panjang: ${keliling}`);
 
 const apakahLebihBesar  = luas > 100;
 console.log(`Apakah luas lebih besar dari 100? ${apakahLebihBesar}`);
+
+

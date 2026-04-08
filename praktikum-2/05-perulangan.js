@@ -14,7 +14,7 @@ while (hitung > 0) {
 console.log('Selesai!');
 
 console.log('\n=== Bilangan Genap antara 1 - 20 ===');
-for (let i = 1; i <= 20; i++) {
+for (let i = 1; i <= 30; i++) {
     if (i % 2 === 0) { // jika i habis dibagi 2 (sisa = 0), maka genap
     process.stdout.write(i + ' '); // cetak di baris yang sama
 }

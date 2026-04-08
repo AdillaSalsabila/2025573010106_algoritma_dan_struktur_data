@@ -9,6 +9,8 @@ let nilaiUjian  = 87;
 let ipk         = 3.75;
 let suhuKulkas = -4;
 
+console.log(nilaiUjian + ipk);
+
 console.log('Nilai Ujian :', nilaiUjian);
 console.log('IPK        :', ipk);
 console.log('Suhu Kulkas :  ', suhuKulkas);
@@ -31,3 +33,4 @@ console.log('nilaiUjian :', typeof nilaiUjian);
 console.log('sudahLogin :', typeof sudahLogin );
 console.log('fotoProfil :', typeof fotoProfil);
 console.log('nomorTelepon :', typeof nomorTelepon);
+

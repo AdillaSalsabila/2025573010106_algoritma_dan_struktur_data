@@ -15,3 +15,5 @@ const tahunmasuk = 2023;
 
 console.log('jurusan :',jurusan);
 console.log('tahun masuk :',tahunmasuk);
+
+
