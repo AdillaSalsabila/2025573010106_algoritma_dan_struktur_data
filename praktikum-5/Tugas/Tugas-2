@@ -1,0 +1,56 @@
+function fn_O1(n) {
+    return n + 1;
+}
+function fn_On(n) {
+    let sum = 0;
+    for (let i = 0; i < n; i++) {
+        sum += i;
+    }
+    return sum;
+}
+function fn_OnLogn(n) {
+    let count = 0;
+    for (let i = 0; i < n; i++) {
+
+        for (let j = 1; j < n; j *= 2) {
+            count++;
+        }
+    }
+    return count;
+}
+function fn_On2(n) {
+    let count = 0;
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+            count++;
+        }
+    }
+    return count;
+}
+
+function benchmarkSemua(ukuranData) {
+    console.log("Ukuran Data | O(1) (ms) | O(n) (ms) | O(n log n) (ms) | O(n^2) (ms)");
+    console.log("-------------------------------------------------------------------");
+
+    ukuranData.forEach(n => {
+        const t0 = performance.now();
+        fn_O1(n);
+        const d1 = (performance.now() - t0).toFixed(4);
+
+        const t1 = performance.now();
+        fn_On(n);
+        const dn = (performance.now() - t1).toFixed(4);
+
+        const t2 = performance.now();
+        fn_OnLogn(n);
+        const dnlog = (performance.now() - t2).toFixed(4);
+
+        const t3 = performance.now();
+        fn_On2(n);
+        const dn2 = (performance.now() - t3).toFixed(4);
+
+        console.log(`${n.toString().padEnd(11)} | ${d1.padEnd(9)} | ${dn.padEnd(9)} | ${dnlog.padEnd(15)} | ${dn2}`);
+    });
+}
+benchmarkSemua([100, 500, 1000, 5000, 10000]);
+
