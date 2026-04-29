@@ -34,7 +34,6 @@ function checkTripletFast(arr) {
             if (squares.has(sum)) return true;
         }
     }
-    
     return false;
 }
 function benchmark(label, fn, ...args) {

@@ -40,13 +40,10 @@ console.log("Duplikat CEPAT O(n) :", Date.now() - t, "ms");
 const kata = ["a", "b", "a", "c", "b", "a", "d"];
 console.log("\nFrekuensi:", frekuensiCepat(kata));
 
-/**
- * Latihan 3: Analisis Time & Space Complexity
- */
 
-// 2a. cariPasanganLambat (Nested Loop)
-// Time Complexity: O(n^2) - Karena ada loop di dalam loop.
-// Space Complexity: O(1) - Hanya menggunakan sedikit variabel tambahan, tidak peduli ukuran array.
+ //Latihan 3: Analisis Time & Space Complexity
+
+ // 2a. cariPasanganLambat (Nested Loop)
 function cariPasanganLambat(arr, target) {
     for (let i = 0; i < arr.length; i++) {
         for (let j = i + 1; j < arr.length; j++) {
@@ -59,8 +56,7 @@ function cariPasanganLambat(arr, target) {
 }
 
 // 2b. cariPasanganCepat (Menggunakan Set)
-// Time Complexity: O(n) - Karena hanya melakukan satu kali iterasi pada array.
-// Space Complexity: O(n) - Dalam kasus terburuk, kita menyimpan hampir semua elemen array ke dalam Set.
+
 function cariPasanganCepat(arr, target) {
     const seen = new Set();
     for (let num of arr) {

@@ -1,7 +1,6 @@
 function fungsiA(n) {
   return n * 2;
 }
-
 function fungsiB(n) {
   for (let i = 0; i < n; i++) {
     for (let j = 0; j < n; j++) {}
@@ -26,7 +25,6 @@ function hitungKompleksitas(n, fn, namaFungsi) {
   console.log(`Waktu eksekusi ${namaFungsi} (n=${n}): ${end - start} ms`);
 }
 const n = 1000;
-
 console.log("--- Pengukuran Waktu Eksekusi ---");
 hitungKompleksitas(n, fungsiA, "Fungsi A [O(1)]");
 hitungKompleksitas(n, fungsiB, "Fungsi B [O(n^2)]");
