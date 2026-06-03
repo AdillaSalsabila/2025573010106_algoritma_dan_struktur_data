@@ -1,14 +1,14 @@
 class Node {
   constructor(data) {
     this.data = data;
-    this.next = null; 
-    this.prev = null; 
+    this.next = null;
+    this.prev = null;
   }
 }
 class DoublyLinkedList {
   constructor() {
-    this.head = null; 
-    this.tail = null; 
+    this.head = null;
+    this.tail = null;
     this.size = 0;
   }
   append(data) {
@@ -20,7 +20,7 @@ class DoublyLinkedList {
     } else {
       this.tail.next = newNode;
       newNode.prev = this.tail;
-      this.tail = newNode; 
+      this.tail = newNode;
     }
     this.size++;
   }
@@ -33,7 +33,7 @@ class DoublyLinkedList {
     } else {
       newNode.next = this.head;
       this.head.prev = newNode;
-      this.head = newNode; 
+      this.head = newNode;
     }
     this.size++;
   }
@@ -72,13 +72,12 @@ class DoublyLinkedList {
     let current = this.head;
     while (current) {
       if (current.data === data) {
-        
         if (current === this.head) {
           this.head = this.head.next;
           if (this.head) {
             this.head.prev = null;
           } else {
-            this.tail = null; 
+            this.tail = null;
           }
         } else if (current === this.tail) {
           this.tail = this.tail.prev;
@@ -93,7 +92,7 @@ class DoublyLinkedList {
       current = current.next;
     }
 
-    return false; 
+    return false;
   }
   reverse() {
     if (!this.head) return;
@@ -103,7 +102,7 @@ class DoublyLinkedList {
       temp = current.prev;
       current.prev = current.next;
       current.next = temp;
-      current = current.prev; 
+      current = current.prev;
     }
     temp = this.head;
     this.head = this.tail;
@@ -118,17 +117,25 @@ class DoublyLinkedList {
     let forwardResult = "";
     let currentForward = this.head;
     while (currentForward) {
-      forwardResult += currentForward.next ? `[${currentForward.data}] ⇄ ` : `[${currentForward.data}]`;
+      forwardResult += currentForward.next
+        ? `[${currentForward.data}] ⇄ `
+        : `[${currentForward.data}]`;
       currentForward = currentForward.next;
     }
     console.log(" Dari Depan (Head) :", forwardResult);
     let backwardResult = "";
     let currentBackward = this.tail;
     while (currentBackward) {
-      backwardResult += currentBackward.prev ? `[${currentBackward.data}] ⇄ ` : `[${currentBackward.data}]`;
+      backwardResult += currentBackward.prev
+        ? `[${currentBackward.data}] ⇄ `
+        : `[${currentBackward.data}]`;
       currentBackward = currentBackward.prev;
     }
-    console.log(" Dari Belakang (Tail):", backwardResult, ` (size: ${this.size})`);
+    console.log(
+      " Dari Belakang (Tail):",
+      backwardResult,
+      ` (size: ${this.size})`,
+    );
   }
 }
 console.log("=== Pembuktian & Pengujian Doubly Linked List ===");
