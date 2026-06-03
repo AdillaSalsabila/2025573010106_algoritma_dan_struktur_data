@@ -59,7 +59,6 @@ class DoublyLinkedList {
       current = current.next;
     }
     let previousNode = current.prev;
-
     previousNode.next = newNode;
     newNode.prev = previousNode;
     newNode.next = current;
@@ -88,7 +87,6 @@ class DoublyLinkedList {
           current.prev.next = current.next;
           current.next.prev = current.prev;
         }
-
         this.size--;
         return true;
       }
@@ -149,7 +147,6 @@ dll.print();
 console.log("\n3. Pengujian insertAt() di indeks 2 (menyisipkan nilai 15)");
 dll.insertAt(15, 2);
 dll.print();
-
 console.log("\n4. Pengujian delete() nilai 20");
 dll.delete(20);
 dll.print();

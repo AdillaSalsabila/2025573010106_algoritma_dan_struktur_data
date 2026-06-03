@@ -90,7 +90,6 @@ undoStack.print();
 console.log(`Ukuran Stack: ${undoStack.size()}\n`);
 
 console.log("=== SIMULASI UNDO BEBERAPA KALI (POP) ===");
-
 let undo1 = undoStack.pop();
 console.log(`[Undo dijalankan] -> Membatalkan: "${undo1}"`);
 redoStack.push(undo1); 
